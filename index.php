@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['user'])) {
+    header('location: ./dashboard.php');
+} 
 require_once "./partials/connection.php";
 
 $email = "";
